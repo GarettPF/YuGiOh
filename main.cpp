@@ -7,10 +7,15 @@
 **********************************************************/
 
 
-
-int main() {
+#include "Queue.h"
 	
+int main() {
 
+	// program loop
+	while (menu_choice()) {
+		CLS;
+	}
+	
 
 	return 0;
 }
