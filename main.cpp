@@ -10,8 +10,10 @@
 
 int main() {
 
+	Game game;
+
 	// program loop
-	while (menu_choice()) {
+	while (game.menu_choice()) {
 		CLS;
 	}
 	

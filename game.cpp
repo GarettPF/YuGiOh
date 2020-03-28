@@ -1,5 +1,22 @@
 #include "game.h"
 
+void Game::create_players() {
+	
+
+}
+
+void Game::print_database() {
+	
+	ifstream file(DATA_PATH);
+	string line;
+
+	while (!file.eof()) {
+		file >> line;
+		cout << line << endl;
+	}
+
+}
+
 void Game::print_menu() const {
     cout << "~ Welcome to the world of Yu-Gi-Oh ~" << endl << endl
          << "1. Create Players" << endl
@@ -17,8 +34,10 @@ bool Game::menu_choice() {
 
     switch (choice) {
         case 1:
+			create_players();
             break;
         case 2:
+			print_database();
             break;
         case 3:
             break;
@@ -29,11 +48,4 @@ bool Game::menu_choice() {
     }
 
     return true;
-}
-
-
-void Game::load_cards(ofstream &card_data, Card database[]) {
-
-    
-
 }
