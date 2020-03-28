@@ -6,27 +6,31 @@
 class Queue {
 
 	private:
-		struct QueueNode {
+		struct QNode {
 			Card card;
-			QueueNode *next;
+			QNode *next;
 		};
 
-		QueueNode *first;
-		QueueNode *last;
+		QNode *front;
+		QNode *rear;
+
+		int numItems;
 	
 	public:
 		Queue();
 		~Queue();
 
-		void enqueue(Card *card);
-		void dequeue(Card *card);
+		void enqueue(Card);
+		void dequeue(Card &);
 
 		int count() const {
-			return 0;
+			return numItems;
 		};
 		bool isEmpty() const {
 			return 0 == count();
 		}
+
+		void clear();
 };
 
 

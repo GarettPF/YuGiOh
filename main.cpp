@@ -6,7 +6,7 @@
 * Description: Yu-Gi-Oh the card game simulator			  *
 **********************************************************/
 
-
+#include "Stack.h"
 #include "Queue.h"
 	
 int main() {

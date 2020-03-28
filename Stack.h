@@ -5,19 +5,29 @@
 
 class Stack {
     private:
-        struct StackNode {
+        struct SNode {
             Card card;
-            StackNode *below;
+            SNode *below;
         };
 
-        StackNode *top;
+        SNode *top;
+        int numItems;
     
     public:
         Stack();
         ~Stack();
 
-        void push(Card *card);
-        void pop(Card *card);
+        void push(Card);
+        void pop(Card &);
+
+        int count() const {
+            return numItems;
+        }
+        bool isEmpty() const {
+            return 0 == count();
+        }
+
+        void clear();
 
 };
 
