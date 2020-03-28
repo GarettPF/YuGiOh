@@ -1,6 +1,6 @@
 #include "game.h"
 
-void print_menu() {
+void Game::print_menu() const {
     cout << "~ Welcome to the world of Yu-Gi-Oh ~" << endl << endl
          << "1. Create Players" << endl
          << "2. Add Cards to Specific Player" << endl
@@ -9,9 +9,7 @@ void print_menu() {
          << "5. Exit" << endl;
 }
 
-bool menu_choice() {
-
-    int choice;
+bool Game::menu_choice() {
     do {
         print_menu();
         cin >> choice;
@@ -34,7 +32,7 @@ bool menu_choice() {
 }
 
 
-void load_cards(ofstream &card_data, Card database[]) {
+void Game::load_cards(ofstream &card_data, Card database[]) {
 
     
 

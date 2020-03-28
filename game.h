@@ -1,11 +1,10 @@
 #ifndef GAME_H_
 #define GAME_H_
 
-#include <iostream>
-
 #define CLS system("clear")
 
-using namespace std;
+#include "Stack.h"
+#include "Queue.h"
 
 struct Card {
     string name;
@@ -14,17 +13,17 @@ struct Card {
     int def;
 };
 
-void print_menu();
+class Game {
 
-bool menu_choice();
+    private:
+        int choice;
+        Card allCards[];
 
-void load_cards(ofstream &card_data, Card database[]);
-
-void play_game();
-
-
-
-
-
+    public:
+        void print_menu() const;
+        bool menu_choice();
+        void load_cards(ofstream &card_data, Card database[]);
+        void play_game();
+};
 
 #endif

@@ -5,10 +5,9 @@
 * Date: March 25, 2020									  *
 * Description: Yu-Gi-Oh the card game simulator			  *
 **********************************************************/
-
-#include "Stack.h"
-#include "Queue.h"
 	
+#include "game.h"
+
 int main() {
 
 	// program loop

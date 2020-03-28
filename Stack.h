@@ -1,9 +1,18 @@
 #ifndef STACK_H_
 #define STACK_H_
 
-#include "game.h"
+#include <iostream>
+using namespace std;
 
 class Stack {
+
+    struct Card {
+        string name;
+        string type;
+        int atk;
+        int def;
+    };
+
     private:
         struct SNode {
             Card card;

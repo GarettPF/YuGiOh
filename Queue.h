@@ -1,9 +1,17 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-#include "game.h"
+#include <iostream>
+using namespace std;
 
 class Queue {
+
+	struct Card {
+		string name;
+		string type;
+		int atk;
+		int def;
+	};
 
 	private:
 		struct QNode {
