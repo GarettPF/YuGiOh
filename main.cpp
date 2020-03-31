@@ -9,6 +9,7 @@
 #include "game.h"
 
 int main() {
+	srand(NULL);
 
 	Game game;
 

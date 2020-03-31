@@ -5,13 +5,13 @@
 using namespace std;
 
 class Stack {
-
-    struct Card {
-        string name;
-        string type;
-        int atk;
-        int def;
-    };
+	public:
+		struct Card {
+			string name;
+			string type;
+			int atk;
+			int def;
+		};
 
     private:
         struct SNode {
@@ -23,6 +23,7 @@ class Stack {
         int numItems;
     
     public:
+		
         Stack();
         ~Stack();
 
@@ -37,8 +38,10 @@ class Stack {
         }
 
         void clear();
-
+		void printAll() const;
+		Card searchAndDestroy(int);
 };
+
 
 
 #endif

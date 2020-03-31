@@ -55,3 +55,45 @@ void Stack::clear() {
     }
 
 }
+
+void Stack::printAll() const {
+	SNode *current = top;
+	int count = 0;
+
+	while (current != nullptr) {
+		cout << count++ << ". ";
+		cout << current->card.name << ", "
+			<< current->card.type << ", "
+			<< current->card.atk << ", "
+			<< current->card.def << endl;
+
+		current = current->below;
+	}
+}
+
+Stack::Card Stack::searchAndDestroy(int num) {
+	int count = 0;
+	Card card;
+	SNode *current = top, *prev = top;
+
+	if (count == num) {
+		pop(card);
+		return card;
+	} else {
+		count = 1;
+		current = top->below;
+		prev = top;
+
+		while (count != num && current->below != nullptr) {
+			prev = current;
+			current = current->below;
+			count++;
+		}
+
+		card = current->card;
+		prev->below = current->below;
+		delete current;
+		return card;
+
+	}
+}

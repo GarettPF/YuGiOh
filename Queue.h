@@ -6,12 +6,13 @@ using namespace std;
 
 class Queue {
 
-	struct Card {
-		string name;
-		string type;
-		int atk;
-		int def;
-	};
+	public:
+		struct Card {
+			string name;
+			string type;
+			int atk;
+			int def;
+		};
 
 	private:
 		struct QNode {
@@ -25,6 +26,8 @@ class Queue {
 		int numItems;
 	
 	public:
+		
+
 		Queue();
 		~Queue();
 
